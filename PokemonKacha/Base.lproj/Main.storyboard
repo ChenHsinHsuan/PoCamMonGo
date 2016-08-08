@@ -4,13 +4,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonKacha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PoCamMonGo_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,34 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWn-g7-xOx">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLa-it-Xaa">
-                                <rect key="frame" x="147" y="567" width="80" height="80"/>
+                                <rect key="frame" x="147" y="579" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="D4e-zx-wIq"/>
                                     <constraint firstAttribute="width" constant="80" id="baP-ar-bOj"/>
                                     <constraint firstAttribute="width" secondItem="bLa-it-Xaa" secondAttribute="height" multiplier="1:1" id="n46-t2-1WY"/>
                                 </constraints>
                                 <state key="normal" image="KachaButton"/>
-                                <connections>
-                                    <action selector="takePhotoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fec-uq-XEl"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="EWn-g7-xOx" secondAttribute="trailing" constant="-20" id="1rT-Xk-Sbz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLa-it-Xaa" secondAttribute="bottom" constant="20" id="5w0-U9-3FH"/>
-                            <constraint firstItem="EWn-g7-xOx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Dco-hX-fLA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLa-it-Xaa" secondAttribute="bottom" constant="8" id="5w0-U9-3FH"/>
+                            <constraint firstItem="EWn-g7-xOx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DNo-va-7Hl"/>
                             <constraint firstItem="bLa-it-Xaa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJH-YJ-KNw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EWn-g7-xOx" secondAttribute="bottom" id="cOI-Wo-tLx"/>
-                            <constraint firstItem="EWn-g7-xOx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="nUN-Z2-yoL"/>
+                            <constraint firstItem="EWn-g7-xOx" firstAttribute="centerX" secondItem="bLa-it-Xaa" secondAttribute="centerX" id="dD3-pG-iB9"/>
+                            <constraint firstItem="EWn-g7-xOx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lDb-rQ-5jE"/>
+                            <constraint firstItem="EWn-g7-xOx" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="v6x-K4-wde"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cameraView" destination="EWn-g7-xOx" id="fOW-Ok-qJa"/>
+                        <outlet property="takePhotoButton" destination="bLa-it-Xaa" id="77K-fR-S7V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

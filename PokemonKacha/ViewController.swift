@@ -8,9 +8,10 @@
 
 import UIKit
 import AVFoundation
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var takePhotoButton: UIButton!
     
     var captureSession = AVCaptureSession()
     var sessionOutput = AVCaptureStillImageOutput()
@@ -47,9 +48,7 @@ class ViewController: UIViewController {
                 } catch let error as NSError{
                     print("Error: \(error), \(error.userInfo)")
                 }
-                
-         
-
+            
             }
         }
         
@@ -61,6 +60,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,5 +96,39 @@ class ViewController: UIViewController {
     }
 
     
+    
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        if let touch = touches.first {
+//            let currentPoint = touch.locationInView(self.view)
+//            
+//            if takePhotoButton.frame.contains(currentPoint){
+//                print("Began:\(currentPoint)")
+//                takePhotoButton.layer.position = currentPoint
+//            }
+//        
+//        }
+//    }
+//    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let touch = touches.first {
+            let currentPoint = touch.locationInView(self.cameraView)
+            print("currentPoint:\(currentPoint)")
+            if takePhotoButton.frame.contains(currentPoint){
+                print("Moved:\(currentPoint)")
+                takePhotoButton.layer.position = currentPoint
+            }
+        }
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        if let touch = touches.first {
+//            let currentPoint = touch.locationInView(self.view)
+//            print("currentPoint:\(currentPoint)")
+//            takePhotoButton.layer.position = currentPoint
+//        }
+
+    }
+
+
 }
 
