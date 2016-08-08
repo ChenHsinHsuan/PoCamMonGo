@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F76BCB11D57690C0028BE66 /* PokemonGotcha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonGotcha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F76BCB11D57690C0028BE66 /* PoCammonGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoCammonGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76BCB41D57690C0028BE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F76BCB61D57690C0028BE66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F76BCB91D57690C0028BE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		8F76BCB21D57690C0028BE66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F76BCB11D57690C0028BE66 /* PokemonGotcha.app */,
+				8F76BCB11D57690C0028BE66 /* PoCammonGo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,9 +71,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F76BCB01D57690C0028BE66 /* PokemonGotcha */ = {
+		8F76BCB01D57690C0028BE66 /* PoCammonGo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F76BCC31D57690C0028BE66 /* Build configuration list for PBXNativeTarget "PokemonGotcha" */;
+			buildConfigurationList = 8F76BCC31D57690C0028BE66 /* Build configuration list for PBXNativeTarget "PoCammonGo" */;
 			buildPhases = (
 				8F76BCAD1D57690C0028BE66 /* Sources */,
 				8F76BCAE1D57690C0028BE66 /* Frameworks */,
@@ -84,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = PokemonGotcha;
+			name = PoCammonGo;
 			productName = PokemonKacha;
-			productReference = 8F76BCB11D57690C0028BE66 /* PokemonGotcha.app */;
+			productReference = 8F76BCB11D57690C0028BE66 /* PoCammonGo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8F76BCAC1D57690C0028BE66 /* Build configuration list for PBXProject "PokemonGotcha" */;
+			buildConfigurationList = 8F76BCAC1D57690C0028BE66 /* Build configuration list for PBXProject "PoCammonGo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F76BCB01D57690C0028BE66 /* PokemonGotcha */,
+				8F76BCB01D57690C0028BE66 /* PoCammonGo */,
 			);
 		};
 /* End PBXProject section */
@@ -274,8 +274,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PokemonKacha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aircon.PokemonGotcha;
-				PRODUCT_NAME = PokemonGotcha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aircon.PoCammonGo;
+				PRODUCT_NAME = PoCammonGo;
 			};
 			name = Debug;
 		};
@@ -286,15 +286,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PokemonKacha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aircon.PokemonGotcha;
-				PRODUCT_NAME = PokemonGotcha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aircon.PoCammonGo;
+				PRODUCT_NAME = PoCammonGo;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F76BCAC1D57690C0028BE66 /* Build configuration list for PBXProject "PokemonGotcha" */ = {
+		8F76BCAC1D57690C0028BE66 /* Build configuration list for PBXProject "PoCammonGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F76BCC11D57690C0028BE66 /* Debug */,
@@ -303,13 +303,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F76BCC31D57690C0028BE66 /* Build configuration list for PBXNativeTarget "PokemonGotcha" */ = {
+		8F76BCC31D57690C0028BE66 /* Build configuration list for PBXNativeTarget "PoCammonGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F76BCC41D57690C0028BE66 /* Debug */,
 				8F76BCC51D57690C0028BE66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

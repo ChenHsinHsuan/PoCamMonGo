@@ -15,14 +15,13 @@ class ViewController: UIViewController {
     var captureSession = AVCaptureSession()
     var sessionOutput = AVCaptureStillImageOutput()
     var previewLayer = AVCaptureVideoPreviewLayer()
-    var exportImage:UIImage?
     
     override func viewWillAppear(animated: Bool) {
         
         let devices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
         
         for device in devices {
-            if device.position == AVCaptureDevicePosition.Front{
+            if device.position == AVCaptureDevicePosition.Back{
                 do {
                     let input = try AVCaptureDeviceInput(device: device as! AVCaptureDevice)
                     
@@ -45,11 +44,12 @@ class ViewController: UIViewController {
                             
                         }
                     }
-                } catch {
-                    print("Error!")
+                } catch let error as NSError{
+                    print("Error: \(error), \(error.userInfo)")
                 }
                 
-                
+         
+
             }
         }
         
@@ -75,25 +75,26 @@ class ViewController: UIViewController {
             sessionOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
                 buffer, error in
                 
-//                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
+                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
+                let image = UIImage(data:imageData)!
 //                
-//                let image = UIImage(data:imageData)!
+//                
+//                let scale = UIScreen.mainScreen().scale
+//                UIGraphicsBeginImageContextWithOptions(self.cameraView.frame.size, false, scale)
+//                
+//                let screenshot = UIGraphicsGetImageFromCurrentImageContext()
+//                UIGraphicsEndImageContext()
+//                
                 
-                UIGraphicsBeginImageContextWithOptions(self.cameraView.frame.size, true, 0.0)
-                self.cameraView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-                self.exportImage = UIGraphicsGetImageFromCurrentImageContext()!
-                UIGraphicsEndImageContext()
                 
                 
-                
-                UIImageWriteToSavedPhotosAlbum(self.exportImage!, nil, nil, nil)
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
                 
             })
         }
-        
-        
-        
+      
     }
 
+    
 }
 
