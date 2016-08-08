@@ -13,9 +13,15 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var takePhotoButton: UIButton!
     
+    
     var captureSession = AVCaptureSession()
     var sessionOutput = AVCaptureStillImageOutput()
     var previewLayer = AVCaptureVideoPreviewLayer()
+    
+    var photoImage:UIImage?
+    
+
+    
     
     override func viewWillAppear(animated: Bool) {
         
@@ -59,8 +65,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,7 +80,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 buffer, error in
                 
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
-                let image = UIImage(data:imageData)!
+                self.photoImage = UIImage(data:imageData)!
+
 //                
 //                
 //                let scale = UIScreen.mainScreen().scale
@@ -88,47 +93,31 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 
                 
                 
-                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                
+                self.performSegueWithIdentifier("ResultSegue", sender: self)
                 
             })
         }
       
     }
-
     
     
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        if let touch = touches.first {
-//            let currentPoint = touch.locationInView(self.view)
-//            
-//            if takePhotoButton.frame.contains(currentPoint){
-//                print("Began:\(currentPoint)")
-//                takePhotoButton.layer.position = currentPoint
-//            }
-//        
-//        }
-//    }
-//    
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let touch = touches.first {
-            let currentPoint = touch.locationInView(self.cameraView)
-            print("currentPoint:\(currentPoint)")
-            if takePhotoButton.frame.contains(currentPoint){
-                print("Moved:\(currentPoint)")
-                takePhotoButton.layer.position = currentPoint
-            }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ResultSegue" {
+            let destVC = segue.destinationViewController as! ResultViewController
+            destVC.photoImage = self.photoImage
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        if let touch = touches.first {
-//            let currentPoint = touch.locationInView(self.view)
-//            print("currentPoint:\(currentPoint)")
-//            takePhotoButton.layer.position = currentPoint
-//        }
 
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
 
+   
+    
 }
 
