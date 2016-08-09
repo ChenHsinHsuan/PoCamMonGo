@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3F11BD378F139AFDB8E67A8B8648150A59A07BE3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3F11BD378F139AFDB8E67A8B8648150A59A07BE3" : 0,
+    "EC73B3716A46D7BD7499AA390EDF0C035F260A38" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AB602802-CD10-42C8-9913-76A93834BB1F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3F11BD378F139AFDB8E67A8B8648150A59A07BE3" : "PoCamMonGo\/",
+    "EC73B3716A46D7BD7499AA390EDF0C035F260A38" : "..\/CloudStation\/Develop_iOS\/Swift\/ShibaGenerator"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PoCamMonGo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PoCamMonGo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ChenHsinHsuan\/PoCamMonGo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3F11BD378F139AFDB8E67A8B8648150A59A07BE3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ChenHsinHsuan\/Swift-ShibaGenerator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EC73B3716A46D7BD7499AA390EDF0C035F260A38"
+    }
+  ]
+}

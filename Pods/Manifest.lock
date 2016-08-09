@@ -1,0 +1,67 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Alamofire (3.4.1)
+  - Crashlytics (3.7.2):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
+  - Google-Mobile-Ads-SDK (7.9.1)
+  - ImgurAnonymousAPIClient (0.1.1):
+    - AFNetworking (>= 2.2.2)
+  - Spring (1.0.3)
+  - SVProgressHUD (2.0.3)
+  - SwiftyDropbox (3.0.0):
+    - Alamofire (~> 3.1)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - Google-Mobile-Ads-SDK (~> 7.0)
+  - ImgurAnonymousAPIClient (from `https://github.com/nolanw/ImgurAnonymousAPIClient.git`, tag `v0.1.1`)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
+  - SVProgressHUD
+  - SwiftyDropbox (~> 3.0.0)
+
+EXTERNAL SOURCES:
+  ImgurAnonymousAPIClient:
+    :git: https://github.com/nolanw/ImgurAnonymousAPIClient.git
+    :tag: v0.1.1
+  Spring:
+    :branch: swift2
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  ImgurAnonymousAPIClient:
+    :git: https://github.com/nolanw/ImgurAnonymousAPIClient.git
+    :tag: v0.1.1
+  Spring:
+    :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Google-Mobile-Ads-SDK: 575583d7eae25793bb81ad8673737d1b4ecbedc5
+  ImgurAnonymousAPIClient: 3e5f9b8782e300743ed167d62b775a7f248fa218
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyDropbox: e0d4aa3166082ec07ed942e94edb8c732b3376e4
+
+PODFILE CHECKSUM: 2ac067c3e28f3f53f6050eee4ec506aba0f29982
+
+COCOAPODS: 1.0.0.beta.6

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8F76BCB01D57690C0028BE66"
                BuildableName = "PoCamMonGo.temp_caseinsensitive_rename.app"
-               BlueprintName = "PoCammonGo"
+               BlueprintName = "PoCamMonGo"
                ReferencedContainer = "container:PoCamMonGo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F76BCB01D57690C0028BE66"
             BuildableName = "PoCamMonGo.temp_caseinsensitive_rename.app"
-            BlueprintName = "PoCammonGo"
+            BlueprintName = "PoCamMonGo"
             ReferencedContainer = "container:PoCamMonGo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -57,7 +57,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F76BCB01D57690C0028BE66"
             BuildableName = "PoCamMonGo.temp_caseinsensitive_rename.app"
-            BlueprintName = "PoCammonGo"
+            BlueprintName = "PoCamMonGo"
             ReferencedContainer = "container:PoCamMonGo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,7 +76,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F76BCB01D57690C0028BE66"
             BuildableName = "PoCamMonGo.temp_caseinsensitive_rename.app"
-            BlueprintName = "PoCammonGo"
+            BlueprintName = "PoCamMonGo"
             ReferencedContainer = "container:PoCamMonGo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

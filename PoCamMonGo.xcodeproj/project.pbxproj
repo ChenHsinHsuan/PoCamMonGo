@@ -7,25 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F50C6EF1D58CE3E00F5D9C0 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F50C6EE1D58CE3E00F5D9C0 /* ResultViewController.swift */; };
-		8F76BCB51D57690C0028BE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76BCB41D57690C0028BE66 /* AppDelegate.swift */; };
-		8F76BCB71D57690C0028BE66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76BCB61D57690C0028BE66 /* ViewController.swift */; };
-		8F76BCBA1D57690C0028BE66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BCB81D57690C0028BE66 /* Main.storyboard */; };
-		8F76BCBC1D57690C0028BE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BCBB1D57690C0028BE66 /* Assets.xcassets */; };
-		8F76BCBF1D57690C0028BE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BCBD1D57690C0028BE66 /* LaunchScreen.storyboard */; };
+		4C0079FE20D00B7EAA45D5DC /* Pods_PoCamMonGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962C6E50A78E33D9AC2221BE /* Pods_PoCamMonGo.framework */; };
 		8F76BCC81D57779D0028BE66 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F76BCC71D57779D0028BE66 /* AVFoundation.framework */; };
+		8FC098561D5A117800D6141A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FC098551D5A117800D6141A /* Podfile */; };
+		8FC0985D1D5A122800D6141A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC098571D5A122800D6141A /* ViewController.swift */; };
+		8FC0985E1D5A122800D6141A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC098581D5A122800D6141A /* ResultViewController.swift */; };
+		8FC0985F1D5A122800D6141A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FC098591D5A122800D6141A /* Info.plist */; };
+		8FC098611D5A122800D6141A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC0985B1D5A122800D6141A /* Assets.xcassets */; };
+		8FC098621D5A122800D6141A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0985C1D5A122800D6141A /* AppDelegate.swift */; };
+		8FC098731D5A146700D6141A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC0986F1D5A146700D6141A /* Main.storyboard */; };
+		8FC098741D5A146700D6141A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC098711D5A146700D6141A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F50C6EE1D58CE3E00F5D9C0 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		22D8B14AA5AE10DBB82A80D5 /* Pods-PoCamMonGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoCamMonGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoCamMonGo/Pods-PoCamMonGo.debug.xcconfig"; sourceTree = "<group>"; };
+		443438ACDA0A5A03A5A1DDF8 /* Pods-PoCamMonGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoCamMonGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoCamMonGo/Pods-PoCamMonGo.release.xcconfig"; sourceTree = "<group>"; };
 		8F76BCB11D57690C0028BE66 /* PoCamMonGo.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoCamMonGo.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F76BCB41D57690C0028BE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F76BCB61D57690C0028BE66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8F76BCB91D57690C0028BE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8F76BCBB1D57690C0028BE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8F76BCBE1D57690C0028BE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8F76BCC01D57690C0028BE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F76BCC71D57779D0028BE66 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8FC098551D5A117800D6141A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../../CloudStation/Develop_iOS/Swift/ShibaGenerator/Podfile; sourceTree = "<group>"; };
+		8FC098571D5A122800D6141A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = PoCamMonGo/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		8FC098581D5A122800D6141A /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = PoCamMonGo/ResultViewController.swift; sourceTree = SOURCE_ROOT; };
+		8FC098591D5A122800D6141A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PoCamMonGo/Info.plist; sourceTree = SOURCE_ROOT; };
+		8FC0985B1D5A122800D6141A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PoCamMonGo/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		8FC0985C1D5A122800D6141A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PoCamMonGo/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		8FC098701D5A146700D6141A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PoCamMonGo/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		8FC098721D5A146700D6141A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PoCamMonGo/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		962C6E50A78E33D9AC2221BE /* Pods_PoCamMonGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoCamMonGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,18 +41,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F76BCC81D57779D0028BE66 /* AVFoundation.framework in Frameworks */,
+				4C0079FE20D00B7EAA45D5DC /* Pods_PoCamMonGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28319F3A8FC3B4186169C63C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				962C6E50A78E33D9AC2221BE /* Pods_PoCamMonGo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F76BCA81D57690C0028BE66 = {
 			isa = PBXGroup;
 			children = (
 				8F76BCC71D57779D0028BE66 /* AVFoundation.framework */,
 				8F76BCB31D57690C0028BE66 /* PoCamMonGo */,
 				8F76BCB21D57690C0028BE66 /* Products */,
+				8FC098551D5A117800D6141A /* Podfile */,
+				DD6BE83D5BAF76CAACFC597B /* Pods */,
+				28319F3A8FC3B4186169C63C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,35 +79,47 @@
 		8F76BCB31D57690C0028BE66 /* PoCamMonGo */ = {
 			isa = PBXGroup;
 			children = (
-				8F76BCB41D57690C0028BE66 /* AppDelegate.swift */,
-				8F76BCB61D57690C0028BE66 /* ViewController.swift */,
-				8F76BCB81D57690C0028BE66 /* Main.storyboard */,
-				8F76BCBB1D57690C0028BE66 /* Assets.xcassets */,
-				8F76BCBD1D57690C0028BE66 /* LaunchScreen.storyboard */,
-				8F76BCC01D57690C0028BE66 /* Info.plist */,
-				8F50C6EE1D58CE3E00F5D9C0 /* ResultViewController.swift */,
+				8FC0986F1D5A146700D6141A /* Main.storyboard */,
+				8FC098711D5A146700D6141A /* LaunchScreen.storyboard */,
+				8FC098571D5A122800D6141A /* ViewController.swift */,
+				8FC098581D5A122800D6141A /* ResultViewController.swift */,
+				8FC098591D5A122800D6141A /* Info.plist */,
+				8FC0985B1D5A122800D6141A /* Assets.xcassets */,
+				8FC0985C1D5A122800D6141A /* AppDelegate.swift */,
 			);
 			name = PoCamMonGo;
 			path = PokemonKacha;
 			sourceTree = "<group>";
 		};
+		DD6BE83D5BAF76CAACFC597B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22D8B14AA5AE10DBB82A80D5 /* Pods-PoCamMonGo.debug.xcconfig */,
+				443438ACDA0A5A03A5A1DDF8 /* Pods-PoCamMonGo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F76BCB01D57690C0028BE66 /* PoCammonGo */ = {
+		8F76BCB01D57690C0028BE66 /* PoCamMonGo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F76BCC31D57690C0028BE66 /* Build configuration list for PBXNativeTarget "PoCammonGo" */;
+			buildConfigurationList = 8F76BCC31D57690C0028BE66 /* Build configuration list for PBXNativeTarget "PoCamMonGo" */;
 			buildPhases = (
+				F60325536B14C16789061C67 /* 📦 Check Pods Manifest.lock */,
 				8F76BCAD1D57690C0028BE66 /* Sources */,
 				8F76BCAE1D57690C0028BE66 /* Frameworks */,
 				8F76BCAF1D57690C0028BE66 /* Resources */,
 				8F76BCC61D57691D0028BE66 /* ShellScript */,
+				FDAC491434B84CE7601B84B7 /* 📦 Embed Pods Frameworks */,
+				7F4832F2BE6FB4CED1E61830 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PoCammonGo;
+			name = PoCamMonGo;
 			productName = PokemonKacha;
 			productReference = 8F76BCB11D57690C0028BE66 /* PoCamMonGo.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
@@ -122,7 +153,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F76BCB01D57690C0028BE66 /* PoCammonGo */,
+				8F76BCB01D57690C0028BE66 /* PoCamMonGo */,
 			);
 		};
 /* End PBXProject section */
@@ -132,15 +163,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F76BCBF1D57690C0028BE66 /* LaunchScreen.storyboard in Resources */,
-				8F76BCBC1D57690C0028BE66 /* Assets.xcassets in Resources */,
-				8F76BCBA1D57690C0028BE66 /* Main.storyboard in Resources */,
+				8FC098561D5A117800D6141A /* Podfile in Resources */,
+				8FC0985F1D5A122800D6141A /* Info.plist in Resources */,
+				8FC098611D5A122800D6141A /* Assets.xcassets in Resources */,
+				8FC098741D5A146700D6141A /* LaunchScreen.storyboard in Resources */,
+				8FC098731D5A146700D6141A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7F4832F2BE6FB4CED1E61830 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoCamMonGo/Pods-PoCamMonGo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F76BCC61D57691D0028BE66 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +202,36 @@
 			shellPath = /bin/sh;
 			shellScript = "Auto increment the build number\n#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
 		};
+		F60325536B14C16789061C67 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDAC491434B84CE7601B84B7 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PoCamMonGo/Pods-PoCamMonGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -161,27 +239,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F76BCB71D57690C0028BE66 /* ViewController.swift in Sources */,
-				8F76BCB51D57690C0028BE66 /* AppDelegate.swift in Sources */,
-				8F50C6EF1D58CE3E00F5D9C0 /* ResultViewController.swift in Sources */,
+				8FC098621D5A122800D6141A /* AppDelegate.swift in Sources */,
+				8FC0985E1D5A122800D6141A /* ResultViewController.swift in Sources */,
+				8FC0985D1D5A122800D6141A /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8F76BCB81D57690C0028BE66 /* Main.storyboard */ = {
+		8FC0986F1D5A146700D6141A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8F76BCB91D57690C0028BE66 /* Base */,
+				8FC098701D5A146700D6141A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8F76BCBD1D57690C0028BE66 /* LaunchScreen.storyboard */ = {
+		8FC098711D5A146700D6141A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8F76BCBE1D57690C0028BE66 /* Base */,
+				8FC098721D5A146700D6141A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -274,10 +352,12 @@
 		};
 		8F76BCC41D57690C0028BE66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22D8B14AA5AE10DBB82A80D5 /* Pods-PoCamMonGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = PokemonKacha/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PoCamMonGo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aircon.PoCamMonGo;
 				PRODUCT_NAME = PoCamMonGo.temp_caseinsensitive_rename;
@@ -286,10 +366,12 @@
 		};
 		8F76BCC51D57690C0028BE66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 443438ACDA0A5A03A5A1DDF8 /* Pods-PoCamMonGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = PokemonKacha/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PoCamMonGo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aircon.PoCamMonGo;
 				PRODUCT_NAME = PoCamMonGo.temp_caseinsensitive_rename;
@@ -308,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F76BCC31D57690C0028BE66 /* Build configuration list for PBXNativeTarget "PoCammonGo" */ = {
+		8F76BCC31D57690C0028BE66 /* Build configuration list for PBXNativeTarget "PoCamMonGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F76BCC41D57690C0028BE66 /* Debug */,
