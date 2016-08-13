@@ -15,12 +15,13 @@ import SVProgressHUD
 import SystemConfiguration
 
 
-class ResultViewController: UIViewController, UITextFieldDelegate {
+class ResultViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var cameraImageView: UIImageView!
     @IBOutlet weak var cpTextField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var exportButton: UIButton!
+    @IBOutlet weak var configButton: UIButton!
     
     var photoImage:UIImage!
     var imgurClient:ImgurAnonymousAPIClient? = nil
@@ -81,6 +82,7 @@ class ResultViewController: UIViewController, UITextFieldDelegate {
     func genImage() -> UIImage {
         cancelButton.hidden = !cancelButton.hidden
         exportButton.hidden = !exportButton.hidden
+        configButton.hidden = !configButton.hidden
         
         UIGraphicsBeginImageContextWithOptions(self.view.frame.size, true, 0.0)
         self.view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
@@ -89,7 +91,7 @@ class ResultViewController: UIViewController, UITextFieldDelegate {
         
         cancelButton.hidden = !cancelButton.hidden
         exportButton.hidden = !exportButton.hidden
-        
+        configButton.hidden = !configButton.hidden
         return exportImage
     }
     
@@ -219,16 +221,29 @@ class ResultViewController: UIViewController, UITextFieldDelegate {
         alertController.addAction(cancelAction)
         
         
-        
-        
         presentViewController(alertController, animated: true, completion:nil)
         
-        
-
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
 
+    
+    @IBAction func configButtonPressed(sender: AnyObject) {
+        
+        let popoverVC = storyboard?.instantiateViewControllerWithIdentifier("ConfigPopover") as! ConfigPopoverViewController
+        popoverVC.modalPresentationStyle = .Popover
+        popoverVC.preferredContentSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 20 , UIScreen.mainScreen().bounds.height - 100)
+        if let popoverController = popoverVC.popoverPresentationController {
+            popoverController.sourceView = sender
+            popoverController.sourceRect = CGRect(x: 0, y: 0, width: 85, height: 30)
+            popoverController.permittedArrowDirections = .Any
+            popoverController.delegate = self
+            popoverVC.delegate = self
+        }
+        presentViewController(popoverVC, animated: true, completion: nil)
+    }
+    
+    
 }

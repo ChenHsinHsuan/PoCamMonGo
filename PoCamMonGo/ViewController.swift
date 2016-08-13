@@ -12,48 +12,55 @@ import Photos
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
-    @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var takePhotoButton: UIButton!
-    
-    
-    
+    @IBOutlet weak var liveCamView: UIView!
     
     var photoImage:UIImage?
     
-    var sessionOutput = AVCaptureStillImageOutput()
+    
     var camera = AVCaptureDevicePosition.Back
     var previewLayer = AVCaptureVideoPreviewLayer()
-    let captureSession = AVCaptureSession()
+    var sessionOutput = AVCaptureStillImageOutput()
+    var captureSession =  AVCaptureSession()
     
     func reloadCamera(){
         
+        if captureSession.running {
+            previewLayer.removeFromSuperlayer()
+            captureSession.stopRunning()
+            captureSession =  AVCaptureSession()
+            previewLayer = AVCaptureVideoPreviewLayer()
+        }
         
-//        previewLayer = AVCaptureVideoPreviewLayer()
         let devices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
         
         for device in devices {
             if device.position == camera{
                 do {
                     let input = try AVCaptureDeviceInput(device: device as! AVCaptureDevice)
-                    
+                
                     if captureSession.canAddInput(input) {
+                        
+                        
                         captureSession.addInput(input)
                         sessionOutput.outputSettings = [AVVideoCodecKey:AVVideoCodecJPEG]
+
                         
                         if captureSession.canAddOutput(sessionOutput) {
                             captureSession.addOutput(sessionOutput)
-                            captureSession.startRunning()
+                            captureSession.startRunning() 
                             
                             previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
                             previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
                             previewLayer.connection.videoOrientation = AVCaptureVideoOrientation.Portrait
-                            cameraView.layer.addSublayer(previewLayer)
+                            liveCamView.layer.addSublayer(previewLayer)
                             
-                            previewLayer.position = CGPoint(x: self.cameraView.frame.width/2, y: self.cameraView.frame.height/2)
+                            previewLayer.position = CGPoint(x: liveCamView.frame.width/2, y: self.liveCamView.frame.height/2)
                             
-                            previewLayer.bounds = cameraView.frame
-                            
+                            previewLayer.bounds = liveCamView.frame
                         }
+                    }else{
+                        print("captureSession can't add input... ")
                     }
                 } catch let error as NSError{
                     print("Error: \(error), \(error.userInfo)")
@@ -70,16 +77,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
-    @IBAction func revertCamButtonPressed(sender: UIButton) {
+    @IBAction func CamFilpButtonPressed(sender: UIButton) {
         if camera == AVCaptureDevicePosition.Back {
             camera = AVCaptureDevicePosition.Front
         }else{
             camera = AVCaptureDevicePosition.Back
         }
-        
-        previewLayer.removeFromSuperlayer()
-        captureSession.stopRunning()
-        
         reloadCamera()
     }
     

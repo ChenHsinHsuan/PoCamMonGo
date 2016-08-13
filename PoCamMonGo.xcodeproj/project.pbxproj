@@ -12,7 +12,6 @@
 		8FC098561D5A117800D6141A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FC098551D5A117800D6141A /* Podfile */; };
 		8FC0985D1D5A122800D6141A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC098571D5A122800D6141A /* ViewController.swift */; };
 		8FC0985E1D5A122800D6141A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC098581D5A122800D6141A /* ResultViewController.swift */; };
-		8FC0985F1D5A122800D6141A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FC098591D5A122800D6141A /* Info.plist */; };
 		8FC098611D5A122800D6141A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC0985B1D5A122800D6141A /* Assets.xcassets */; };
 		8FC098621D5A122800D6141A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC0985C1D5A122800D6141A /* AppDelegate.swift */; };
 		8FC098731D5A146700D6141A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC0986F1D5A146700D6141A /* Main.storyboard */; };
@@ -24,6 +23,7 @@
 		443438ACDA0A5A03A5A1DDF8 /* Pods-PoCamMonGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoCamMonGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PoCamMonGo/Pods-PoCamMonGo.release.xcconfig"; sourceTree = "<group>"; };
 		8F76BCB11D57690C0028BE66 /* PoCamMonGo.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoCamMonGo.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F76BCC71D57779D0028BE66 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8F8023CA1D5F5F2900F25424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = PoCamMonGo/Base.lproj/ConfigPopoverViewController.swift; sourceTree = SOURCE_ROOT; };
 		8FC098551D5A117800D6141A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../../CloudStation/Develop_iOS/Swift/ShibaGenerator/Podfile; sourceTree = "<group>"; };
 		8FC098571D5A122800D6141A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = PoCamMonGo/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		8FC098581D5A122800D6141A /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = PoCamMonGo/ResultViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -86,6 +86,7 @@
 				8FC098591D5A122800D6141A /* Info.plist */,
 				8FC0985B1D5A122800D6141A /* Assets.xcassets */,
 				8FC0985C1D5A122800D6141A /* AppDelegate.swift */,
+				8F8023C91D5F5F2900F25424 /* ConfigPopoverViewController.swift */,
 			);
 			name = PoCamMonGo;
 			path = PokemonKacha;
@@ -164,7 +165,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FC098561D5A117800D6141A /* Podfile in Resources */,
-				8FC0985F1D5A122800D6141A /* Info.plist in Resources */,
 				8FC098611D5A122800D6141A /* Assets.xcassets in Resources */,
 				8FC098741D5A146700D6141A /* LaunchScreen.storyboard in Resources */,
 				8FC098731D5A146700D6141A /* Main.storyboard in Resources */,
@@ -248,6 +248,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8F8023C91D5F5F2900F25424 /* ConfigPopoverViewController.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F8023CA1D5F5F2900F25424 /* Base */,
+			);
+			name = ConfigPopoverViewController.swift;
+			sourceTree = "<group>";
+		};
 		8FC0986F1D5A146700D6141A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
