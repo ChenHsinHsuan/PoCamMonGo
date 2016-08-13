@@ -22,13 +22,13 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var sessionOutput = AVCaptureStillImageOutput()
     var camera = AVCaptureDevicePosition.Back
-    
-    
+    var previewLayer = AVCaptureVideoPreviewLayer()
+    let captureSession = AVCaptureSession()
     
     func reloadCamera(){
-        let captureSession = AVCaptureSession()
         
-        var previewLayer = AVCaptureVideoPreviewLayer()
+        
+//        previewLayer = AVCaptureVideoPreviewLayer()
         let devices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
         
         for device in devices {
@@ -76,6 +76,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         }else{
             camera = AVCaptureDevicePosition.Back
         }
+        
+        previewLayer.removeFromSuperlayer()
+        captureSession.stopRunning()
+        
         reloadCamera()
     }
     
