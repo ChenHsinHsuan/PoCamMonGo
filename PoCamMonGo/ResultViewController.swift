@@ -19,12 +19,17 @@ class ResultViewController: UIViewController, UITextFieldDelegate, UIPopoverPres
 
     @IBOutlet weak var cameraImageView: UIImageView!
     @IBOutlet weak var cpTextField: UITextField!
+    @IBOutlet weak var cpBackgroundImageView: UIImageView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var exportButton: UIButton!
     @IBOutlet weak var configButton: UIButton!
+    @IBOutlet weak var leaveButtonImageView: UIImageView!
+    @IBOutlet weak var arSwitchImageView: UIImageView!
+    @IBOutlet weak var pokemonBallButton: UIButton!
     
     var photoImage:UIImage!
     var imgurClient:ImgurAnonymousAPIClient? = nil
+    
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -230,20 +235,54 @@ class ResultViewController: UIViewController, UITextFieldDelegate, UIPopoverPres
     }
 
     
-    @IBAction func configButtonPressed(sender: AnyObject) {
+    @IBAction func configButtonPressed(sender: UIButton) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let popoverVC = storyboard.instantiateViewControllerWithIdentifier("ConfigPopover") as! ConfigPopoverViewController
+        popoverVC.modalPresentationStyle = UIModalPresentationStyle.Popover
+        popoverVC.preferredContentSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 20, UIScreen.mainScreen().bounds.height)
         
-        let popoverVC = storyboard?.instantiateViewControllerWithIdentifier("ConfigPopover") as! ConfigPopoverViewController
-        popoverVC.modalPresentationStyle = .Popover
-        popoverVC.preferredContentSize = CGSizeMake(UIScreen.mainScreen().bounds.width - 20 , UIScreen.mainScreen().bounds.height - 100)
+        popoverVC.leaveButtonDisplay = !leaveButtonImageView.hidden
+        popoverVC.arButtonDisplay = !arSwitchImageView.hidden
+        popoverVC.cpBackgroundDisplay = !cpBackgroundImageView.hidden
+        popoverVC.pokemonBallDisplay = !pokemonBallButton.hidden
+        
+        
         if let popoverController = popoverVC.popoverPresentationController {
             popoverController.sourceView = sender
-            popoverController.sourceRect = CGRect(x: 0, y: 0, width: 85, height: 30)
-            popoverController.permittedArrowDirections = .Any
+            popoverController.sourceRect = sender.bounds
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection.Down
             popoverController.delegate = self
             popoverVC.delegate = self
         }
         presentViewController(popoverVC, animated: true, completion: nil)
+        
     }
     
+    // Override the iPhone behavior that presents a popover as fullscreen
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        // Return no adaptive presentation style, use default presentation behaviour
+        return .None
+    }
+    
+    
+    
+    
+    //MARK: -Config Popover Delegate
+    func triggerLeaveButton(value:Bool){
+        leaveButtonImageView.hidden = !value
+    }
+    
+    func triggerARButton(value:Bool){
+        arSwitchImageView.hidden = !value
+    }
+    
+    func triggerPokemonBallButton(value:Bool){
+        pokemonBallButton.hidden = !value
+    }
+    
+    func triggerCPTextField(value:Bool){
+        cpTextField.hidden = !value
+        cpBackgroundImageView.hidden = !value
+    }
     
 }

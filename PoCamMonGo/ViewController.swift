@@ -23,8 +23,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     var sessionOutput = AVCaptureStillImageOutput()
     var captureSession =  AVCaptureSession()
     
+    // If we find a device we'll store it here for later use
+    var captureDevice : AVCaptureDevice?
+    
     func reloadCamera(){
-        
         if captureSession.running {
             previewLayer.removeFromSuperlayer()
             captureSession.stopRunning()
@@ -32,10 +34,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             previewLayer = AVCaptureVideoPreviewLayer()
         }
         
-        let devices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
-        
-        for device in devices {
+        for device in AVCaptureDevice.devices() {
             if device.position == camera{
+                captureDevice = device as? AVCaptureDevice
                 do {
                     let input = try AVCaptureDeviceInput(device: device as! AVCaptureDevice)
                 
@@ -96,8 +97,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         // ask camera permission
         AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo, completionHandler: { (granted :Bool) -> Void in
         })
-
-        
+            
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,19 +114,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                 
                 let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
                 self.photoImage = UIImage(data:imageData)!
-
-//                
-//                
-//                let scale = UIScreen.mainScreen().scale
-//                UIGraphicsBeginImageContextWithOptions(self.cameraView.frame.size, false, scale)
-//                
-//                let screenshot = UIGraphicsGetImageFromCurrentImageContext()
-//                UIGraphicsEndImageContext()
-//                
-                
-                
-                
-//                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
                 
                 self.performSegueWithIdentifier("ResultSegue", sender: self)
                 
@@ -148,9 +135,61 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    
+    
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        //Get Touch Point
+        let Point = touches.first!.locationInView(liveCamView)
+        //Assign Auto Focus and Auto Exposour
+        if let device = captureDevice {
+            do {
+                try! device.lockForConfiguration()
+                if device.focusPointOfInterestSupported{
+                    //Add Focus on Point
+                    device.focusPointOfInterest = Point
+                    device.focusMode = AVCaptureFocusMode.AutoFocus
+                }
+                
+                if device.exposurePointOfInterestSupported{
+                    //Add Exposure on Point
+                    device.exposurePointOfInterest = Point
+                    device.exposureMode = AVCaptureExposureMode.AutoExpose
+                }
+                device.unlockForConfiguration()
+                
+            }
+        }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        //Get Touch Point
+        let Point = touches.first!.locationInView(liveCamView)
+        //Assign Auto Focus and Auto Exposour
+        if let device = captureDevice {
+            do {
+                try! device.lockForConfiguration()
+                if device.focusPointOfInterestSupported{
+                    //Add Focus on Point
+                    device.focusPointOfInterest = Point
+                    device.focusMode = AVCaptureFocusMode.ContinuousAutoFocus
+                }
+                
+                if device.exposurePointOfInterestSupported{
+                    //Add Exposure on Point
+                    device.exposurePointOfInterest = Point
+                    device.exposureMode = AVCaptureExposureMode.AutoExpose
+                }
+                device.unlockForConfiguration()
+            }
+        }
 
-
-   
+    }
+    
+    
+    
     
 }
 
