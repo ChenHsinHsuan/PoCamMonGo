@@ -9,14 +9,17 @@
 import UIKit
 import AVFoundation
 import Photos
+import MobileCoreServices
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate {
+
+
+class ViewController: UIViewController, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var liveCamView: UIView!
     
     var photoImage:UIImage?
-    
+    var imagePicker:UIImagePickerController?;
     
     var camera = AVCaptureDevicePosition.Back
     var previewLayer = AVCaptureVideoPreviewLayer()
@@ -143,6 +146,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         //Get Touch Point
         let Point = touches.first!.locationInView(liveCamView)
+        
+        
         //Assign Auto Focus and Auto Exposour
         if let device = captureDevice {
             do {
@@ -189,7 +194,31 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
+    @IBAction func photoLibraryButtonPressed(sender: AnyObject) {
+        
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary){
+            self.imagePicker = UIImagePickerController()
+            self.imagePicker!.delegate = self
+            self.imagePicker!.mediaTypes = [kUTTypeImage as String]
+            self.imagePicker!.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.imagePicker!.allowsEditing = true
+            
+            self.presentViewController(self.imagePicker!, animated: true, completion:nil)
+        }
+
+    }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        self.dismissViewControllerAnimated(true, completion:{
+            self.photoImage = image
+            self.performSegueWithIdentifier("ResultSegue", sender: self)
+        })
+        
+        
+    }
+
     
 }
 

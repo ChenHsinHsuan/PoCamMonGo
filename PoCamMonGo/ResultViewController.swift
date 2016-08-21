@@ -165,7 +165,7 @@ class ResultViewController: UIViewController, UITextFieldDelegate, UIPopoverPres
                 alertView.addAction(okAciton)
                 self.presentViewController(alertView, animated: true, completion: nil)
             }else{
-                let alertView = UIAlertController(title: "匯出失敗", message:  "請至設定>隱私權>照片>將PoCamMonGo的權限打開唷!!", preferredStyle: UIAlertControllerStyle.Alert)
+                let alertView = UIAlertController(title: "匯出失敗", message:  "請至設定>隱私權>照片>將「寶Cam夢」的權限打開唷!!", preferredStyle: UIAlertControllerStyle.Alert)
                 alertView.addAction(okAciton)
                 self.presentViewController(alertView, animated: true, completion: nil)
             }

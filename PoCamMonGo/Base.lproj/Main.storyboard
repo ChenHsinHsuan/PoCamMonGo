@@ -59,17 +59,17 @@
                                     <action selector="CamFilpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8x-2D-Sbh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAMPLE / CP 12345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwa-Rb-00r">
-                                <rect key="frame" x="96" y="109" width="182.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Coe-7Z-Mxi" userLabel="PhotoLibraryButton">
+                                <rect key="frame" x="282" y="565" width="77" height="77"/>
+                                <state key="normal" image="ImagePickerButton"/>
+                                <connections>
+                                    <action selector="photoLibraryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4oW-rz-kJ8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Jwa-Rb-00r" firstAttribute="centerX" secondItem="bRO-sB-qdF" secondAttribute="centerX" id="6Sc-Sv-fPQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6VF-9n-hzo" secondAttribute="bottom" id="A8r-B2-0dF"/>
                             <constraint firstItem="6VF-9n-hzo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bcs-nV-u6P"/>
                             <constraint firstItem="bLa-it-Xaa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DEa-Id-a7T"/>
@@ -77,11 +77,13 @@
                             <constraint firstItem="WNs-eF-w9c" firstAttribute="centerY" secondItem="bLa-it-Xaa" secondAttribute="centerY" id="FR5-0w-HaK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WNs-eF-w9c" secondAttribute="bottom" constant="25" id="Ghh-8t-xSR"/>
                             <constraint firstItem="bRO-sB-qdF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="HSv-io-UJ1"/>
+                            <constraint firstItem="Coe-7Z-Mxi" firstAttribute="centerY" secondItem="bLa-it-Xaa" secondAttribute="centerY" id="SGR-m1-Q64"/>
                             <constraint firstItem="6VF-9n-hzo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UHN-11-qji"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLa-it-Xaa" secondAttribute="bottom" constant="20" id="jas-Gm-yqD"/>
                             <constraint firstItem="bRO-sB-qdF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pRv-HJ-QUA"/>
                             <constraint firstAttribute="leadingMargin" secondItem="WNs-eF-w9c" secondAttribute="leading" constant="5" id="qkt-KP-SVQ"/>
-                            <constraint firstItem="Jwa-Rb-00r" firstAttribute="centerY" secondItem="bRO-sB-qdF" secondAttribute="centerY" id="xgB-XC-rbT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Coe-7Z-Mxi" secondAttribute="trailing" id="sUq-Hy-phV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Coe-7Z-Mxi" secondAttribute="bottom" constant="25" id="wkn-Sl-I4K"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -209,7 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euc-dd-bMf" userLabel="Photo Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euc-dd-bMf" userLabel="Photo Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkK-YR-Vrf" userLabel="Take Photo Button">
@@ -310,6 +312,7 @@
         <image name="ConfigButton" width="77" height="77"/>
         <image name="EmptyCP" width="300" height="60"/>
         <image name="ExportButton" width="77" height="77"/>
+        <image name="ImagePickerButton" width="77" height="77"/>
         <image name="LeaveButton" width="47" height="47"/>
         <image name="PokemonBall" width="86" height="86"/>
     </resources>

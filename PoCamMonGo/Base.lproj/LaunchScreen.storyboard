@@ -42,24 +42,16 @@
                                     <action selector="CamFilpButtonPressed:" destination="7ir-hr-mPb" eventType="touchUpInside" id="4Ax-QJ-ZVN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="預留空間/ CP XXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjA-8Z-XyN">
-                                <rect key="frame" x="99.5" y="109" width="175" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="BjA-8Z-XyN" firstAttribute="centerY" secondItem="itD-Gl-gc8" secondAttribute="centerY" id="4Q6-8M-CfI"/>
                             <constraint firstItem="CZF-Ls-tb6" firstAttribute="top" secondItem="h0g-LX-BYD" secondAttribute="bottom" constant="25" id="AVX-0S-Iue"/>
                             <constraint firstItem="wig-JC-Far" firstAttribute="centerX" secondItem="d39-yV-zry" secondAttribute="centerX" id="EIa-NP-Bqy"/>
                             <constraint firstItem="itD-Gl-gc8" firstAttribute="centerX" secondItem="d39-yV-zry" secondAttribute="centerX" id="KJH-Ov-Zu4"/>
                             <constraint firstAttribute="leadingMargin" secondItem="h0g-LX-BYD" secondAttribute="leading" constant="5" id="T9L-xk-nRY"/>
                             <constraint firstItem="CZF-Ls-tb6" firstAttribute="top" secondItem="wig-JC-Far" secondAttribute="bottom" constant="20" id="Vt1-3u-fwP"/>
                             <constraint firstItem="h0g-LX-BYD" firstAttribute="centerY" secondItem="wig-JC-Far" secondAttribute="centerY" id="fV4-FU-i8C"/>
-                            <constraint firstItem="BjA-8Z-XyN" firstAttribute="centerX" secondItem="itD-Gl-gc8" secondAttribute="centerX" id="h4Z-nF-nzj"/>
                             <constraint firstItem="itD-Gl-gc8" firstAttribute="top" secondItem="VZ2-Fr-vdX" secondAttribute="bottom" constant="71" id="hBT-eJ-oL9"/>
                         </constraints>
                     </view>
